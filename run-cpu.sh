@@ -1,6 +1,6 @@
 sudo apt-get update
 sudo apt install -y iperf3
-sudo apt instal -y ffmpeg
+sudo apt install -y ffmpeg
 sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq &&\
     sudo chmod +x /usr/bin/yq
 git clone https://github.com/kuntaidu/dds.git
