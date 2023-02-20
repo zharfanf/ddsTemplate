@@ -27,6 +27,10 @@ gdown --id 1amHsuouzNZ_HgmOwoel8kCBf9R4CUOZ7
 
 unzip res20Feb.zip
 
+mv ./res20Feb/* ./
+
+rm -r res20Feb/
+
 cd ..
 
 wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb
