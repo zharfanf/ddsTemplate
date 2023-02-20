@@ -7,7 +7,7 @@ git clone https://github.com/kuntaidu/dds.git
 
 cd dds/
 
-yq -i '.dependencies[1] = tensorflow==1.14' conda_environment_configuration.yml
+yq -i '.dependencies[1] = tensorflow=1.14' conda_environment_configuration.yml
 
 conda env create -f conda_environment_configuration.yml
 
@@ -18,6 +18,14 @@ gdown --id 1JD0_Wr0Jxc0ra6glfsp5RYGHjEwyzryE
 tar -xzf Copy\ of\ data-set.tar.gz
 
 cd workspace/
+
+mkdir results
+
+cd results/
+
+gdown --id 1amHsuouzNZ_HgmOwoel8kCBf9R4CUOZ7
+
+unzip res20Feb.zip
 
 wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb
 
