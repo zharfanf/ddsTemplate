@@ -3,9 +3,9 @@ sudo apt install -y iperf3
 sudo apt install -y ffmpeg
 sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq &&\
     sudo chmod +x /usr/bin/yq
-git clone https://github.com/kuntaidu/dds.git
+git clone https://github.com/zharfanf/dds-zharfanf.git
 
-cd dds/
+cd dds-zharfanf/
 
 yq -i '.dependencies[1] = tensorflow=1.14' conda_environment_configuration.yml
 
@@ -26,6 +26,8 @@ cd results/
 gdown --id 1amHsuouzNZ_HgmOwoel8kCBf9R4CUOZ7
 
 unzip res20Feb.zip
+
+cd ..
 
 wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb
 
