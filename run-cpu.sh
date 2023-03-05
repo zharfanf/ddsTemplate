@@ -43,3 +43,20 @@ cd ..
 mv uav-1/ src/
 mkdir uav-1/
 mv src/ uav-1/.
+
+
+# server-2
+gdown --id 1fgYU85uzT6JsUz4sAVJ3wtvXVpYuygaM
+unzip server-2.zip
+
+# server-1
+gdown --id 14jKukgoaOoH3Ma1nT0-UnJCNxMnN-UbN
+unzip server-1.zip
+
+# client-1
+gdown --id 1Yyb1oGjPz9pFLhe4mxBjHfiwze0WNqxM
+unzip client1.zip
+
+# client-2
+gdown --id 1QFssDjQomcW3pWixCJWPiG5ZBI-PnFiO
+unzip client2.zip
