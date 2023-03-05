@@ -43,7 +43,7 @@ cd ..
 mv uav-1/ src/
 mkdir uav-1/
 mv src/ uav-1/.
-
+cd ..
 
 # server-2
 gdown --id 1fgYU85uzT6JsUz4sAVJ3wtvXVpYuygaM
