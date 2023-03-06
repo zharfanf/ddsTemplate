@@ -37,12 +37,30 @@ wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb
 
 cd ../data-set
 cp -r uav-1/ uav-1-roy/
-cd uav-1/
-rm -r merged-results/ results/
-cd ..
 mv uav-1/ src/
 mkdir uav-1/
 mv src/ uav-1/.
+
+cp -r rene/ rene-roy/
+mv rene/ src/
+mkdir rene/
+mv src/ rene/.
+
+cp -r thailand-1st-half/ thailand-1st-half-roy/
+mv thailand-1st-half/ src/
+mkdir thailand-1st-half/
+mv src/ thailand-1st-half/.
+
+cp -r uav-2/ uav-2-roy/
+mv uav-2/ src/
+mkdir uav-2/
+mv src/ uav-2/.
+
+cp -r ../profile-rene/profile-separated/ ./rene/src/
+cp -r ../profile-uav-1/profile-separated/ ./uav-1/src/
+cp -r ../profile-uav-2/profile-separated/ ./uav-2/src/
+cp -r ../profile-thailand-1st-half/profile-separated/ ./thailand-1st-half/src/
+
 cd ..
 
 # server-2
