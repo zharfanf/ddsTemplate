@@ -29,3 +29,8 @@ mkdir results
 for i in ../../../../../dds-zharfanf/workspace/results/*uav-2*; do cp $i ./results/; done
 cp -r ./../../../../dds-zharfanf/workspace/profile-uav-2/ .
 mv profile-separated/ profile/
+
+cd ..
+wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb
+cd workspace/
+wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb

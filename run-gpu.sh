@@ -28,8 +28,8 @@ cd temp
 gdown --id 1pAwjs24a3tMui9xqo0EaRqYdq96BXBbn
 unzip dds-zharfanf.zip
 cp -r ./dds-zharfanf/workspace/results/ ../dds-zharfanf/workspace/
-cp ./dds-zharfanf/workspace/results/stats ../dds-zharfanf/workspace/
-cp ./dds-zharfanf/workspace/results/statsTest ../dds-zharfanf/workspace/
+cp ./dds-zharfanf/workspace/stats ../dds-zharfanf/workspace/
+cp ./dds-zharfanf/workspace/statsTest ../dds-zharfanf/workspace/
 cp -r ./dds-zharfanf/workspace/profile-* ../dds-zharfanf/workspace/
 
 cd ../dds-zharfanf/workspace
