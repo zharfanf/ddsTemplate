@@ -17,6 +17,7 @@ mv profile-separated/ profile/
 cd profile/
 touch profile_info.yml
 echo 'segment_size: 5' >> profile_info.yml
+cd ..
 
 cd ../uav-1/
 mkdir results
@@ -48,6 +49,7 @@ mv profile-separated/ profile/
 cd profile/
 touch profile_info.yml
 echo 'segment_size: 5' >> profile_info.yml
+cd ..
 
 cd ../highway/
 mkdir results
@@ -77,6 +79,7 @@ mv profile-separated/ profile/
 cd profile/
 touch profile_info.yml
 echo 'segment_size: 5' >> profile_info.yml
+cd ../..
 
 cd ..
 wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb
