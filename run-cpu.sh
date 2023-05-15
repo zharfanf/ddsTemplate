@@ -30,7 +30,7 @@ cp -r ./new-dataset/* ./data-set/
 rm new-dataset.zip
 
 # add new dataset (jakarta and highway)
-cd ../data-set/
+cd ./data-set/
 gdown --id 1SDYoI_fj9OqWH8yyH_K3Nms2-pSfIsdX
 unzip new-dataset-2.zip
 rm new-dataset-2.zip
@@ -49,7 +49,7 @@ cp -r ./profile-rene/profile-separated/ ../data-set/rene/
 cp -r ./profile-uav-1/profile-separated/ ../data-set/uav-1/
 cp -r ./profile-uav-2/profile-separated/ ../data-set/uav-2/
 
-cd ../dds-zharfanf/workspace
+cd ../dds-zharfanf/workspace/
 
 # roppongi results
 gdown --id 1g6vaIz8Q6hBnJZxDJJqVXTxTaR9AUw_R
@@ -66,12 +66,13 @@ cp -r ./profile-coldwater/profile-separated/ ../data-set/coldwater/
 # jakarta, highway, and coldwater as well as roppongi mpeg results
 gdown --id 1aS_MKrMUcUxFXm7BVsGw8vdfi3WJdziA
 unzip jakarta_highway_update_of_coldwater_roppongi.zip
-for i in jakartaResults/*; do cp $i ./results/; done
-for i in highwayResults/*; do cp $i ./results/; done
+for i in ./workspace/jakartaResults/*; do cp $i ./results/; done
+for i in ./workspace/highwayResults/*; do cp $i ./results/; done
 for i in coldwaterMpegGt/*; do cp $i ./results/; done
 for i in roppongiMpegGt/*; do cp $i ./results/; done
-cp -r ./profile-jakarta/profile-separated/ ../data-set/jakarta/
-cp -r ./profile-highway/profile-separated/ ../data-set/highway/
+cp -r ./workspace/profile-jakarta/profile-separated/ ../data-set/jakarta/
+cp -r ./workspace/profile-highway/profile-separated/ ../data-set/highway/
+rm -r ./workspace/
 
 wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb
 cp ./frozen_inference_graph.pb ..
