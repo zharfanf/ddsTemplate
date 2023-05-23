@@ -27,9 +27,6 @@ gdown --id 1D0xF0A33PKQHNk-kAJqCyuZIZg5TfaBK # new-dataset.zip
 unzip new-dataset.zip
 cp -r ./new-dataset/* ./data-set/
 
-# jakarta dataset
-
-# highway dataset
 
 # is this still necessary? dds-zharfanf from my local earlier
 cd ..
