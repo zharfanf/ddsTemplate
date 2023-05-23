@@ -58,12 +58,13 @@ cp -r ./profile-coldwater/profile-separated/ ../data-set/coldwater/
 # jakarta, highway, and coldwater as well as roppongi mpeg results
 gdown --id 1aS_MKrMUcUxFXm7BVsGw8vdfi3WJdziA
 unzip jakarta_highway_update_of_coldwater_roppongi.zip
-for i in jakartaResults/*; do cp $i ./results/; done
-for i in highwayResults/*; do cp $i ./results/; done
+for i in ./workspace/jakartaResults/*; do cp $i ./results/; done
+for i in ./workspace/highwayResults/*; do cp $i ./results/; done
 for i in coldwaterMpegGt/*; do cp $i ./results/; done
 for i in roppongiMpegGt/*; do cp $i ./results/; done
-cp -r ./profile-jakarta/profile-separated/ ../data-set/jakarta/
-cp -r ./profile-highway/profile-separated/ ../data-set/highway/
+cp -r ./workspace/profile-jakarta/profile-separated/ ../data-set/jakarta/
+cp -r ./workspace/profile-highway/profile-separated/ ../data-set/highway/
+rm -r ./workspace/
 
 wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb
 cp ./frozen_inference_graph.pb ..
@@ -74,7 +75,7 @@ gdown --id 1SDYoI_fj9OqWH8yyH_K3Nms2-pSfIsdX
 unzip new-dataset-2.zip
 rm new-dataset-2.zip
 
-cd ../jakarta/
+cd ./jakarta/
 mkdir src
 mv * src/
 
