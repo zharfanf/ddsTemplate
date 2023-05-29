@@ -1,15 +1,15 @@
 cd ~
 git clone https://github.com/royyhuang/VAP-Concierge.git
 cd VAP-Concierge/
-git checkout dds-zharfanf
+git checkout dds-qingyang
 
 # copying data-set to app
-cp -r ../dds-zharfanf/data-set/ ./src/app/dds-qyx/
+cp -r ../dds-zharfanf/data-set/ ./src/app/dds-adaptive/
 
 # copying results and profile
 
 # rene
-cd src/app/dds-qyx/data-set/rene
+cd src/app/dds-adaptive/data-set/rene
 mkdir results
 for i in ../../../../../../dds-zharfanf/workspace/results/*rene*; do cp $i ./results/; done
 cp -r ../../../../../../dds-zharfanf/workspace/profile-rene/profile-separated/ .
