@@ -5,6 +5,11 @@ sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd6
     sudo chmod +x /usr/bin/yq
 git clone https://github.com/zharfanf/dds-zharfanf.git
 
+if [[ -f  "./miniconda3" ]]; then
+    wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
+    bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
+fi
+
 cd dds-zharfanf/
 
 git checkout edge

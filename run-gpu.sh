@@ -5,6 +5,12 @@ sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd6
     sudo chmod +x /usr/bin/yq
 git clone https://github.com/zharfanf/dds-zharfanf.git
 
+# Assume there is no miniconda3 available
+if [[ -f  "./miniconda3" ]]; then
+    wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
+    bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
+fi
+
 cd dds-zharfanf/
 
 git checkout edge
@@ -27,9 +33,6 @@ gdown --id 1D0xF0A33PKQHNk-kAJqCyuZIZg5TfaBK # new-dataset.zip
 unzip new-dataset.zip
 cp -r ./new-dataset/* ./data-set/
 
-# jakarta dataset
-
-# highway dataset
 
 # is this still necessary? dds-zharfanf from my local earlier
 cd ..
