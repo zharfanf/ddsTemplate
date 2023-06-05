@@ -1,7 +1,10 @@
+sudo apt-get update
+sudo apt install -y iperf3
+sudo apt install -y ffmpeg
 cd ~
 git clone https://github.com/royyhuang/VAP-Concierge.git
 cd VAP-Concierge/
-git checkout dds-zharfanf
+git checkout vap-zharfanf
 
 # copying data-set to app
 cp -r ../dds-zharfanf/data-set/ ./src/app/dds-qyx/
