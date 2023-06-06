@@ -5,7 +5,7 @@ sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd6
     sudo chmod +x /usr/bin/yq
 git clone https://github.com/zharfanf/dds-zharfanf.git
 
-if [[ -f  "./miniconda3" ]]; then
+if [[ !-d  "./miniconda3" ]]; then
     wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
     bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
 fi
@@ -40,7 +40,7 @@ gdown --id 1SDYoI_fj9OqWH8yyH_K3Nms2-pSfIsdX
 unzip new-dataset-2.zip
 rm new-dataset-2.zip
 
-cd ..
+cd ../..
 mkdir temp
 cd temp
 gdown --id 1pAwjs24a3tMui9xqo0EaRqYdq96BXBbn
@@ -59,7 +59,7 @@ cd ../dds-zharfanf/workspace/
 # roppongi results
 gdown --id 1g6vaIz8Q6hBnJZxDJJqVXTxTaR9AUw_R
 unzip roppongi.zip
-for i in roppongiResults/*; do cp $i ./results/; done
+cp roppongiResults/* ./results/
 cp -r ./profile-roppongi/profile-separated/ ../data-set/roppongi/
 
 # coldwater results
@@ -71,10 +71,10 @@ cp -r ./profile-coldwater/profile-separated/ ../data-set/coldwater/
 # jakarta, highway, and coldwater as well as roppongi mpeg results
 gdown --id 1aS_MKrMUcUxFXm7BVsGw8vdfi3WJdziA
 unzip jakarta_highway_update_of_coldwater_roppongi.zip
-for i in ./workspace/jakartaResults/*; do cp $i ./results/; done
-for i in ./workspace/highwayResults/*; do cp $i ./results/; done
-for i in coldwaterMpegGt/*; do cp $i ./results/; done
-for i in roppongiMpegGt/*; do cp $i ./results/; done
+cp ./workspace/jakartaResults/* ./results/
+cp ./workspace/highwayResults/* ./results/
+cp coldwaterMpegGt/* ./results/
+cp roppongiMpegGt/* ./results/
 cp -r ./workspace/profile-jakarta/profile-separated/ ../data-set/jakarta/
 cp -r ./workspace/profile-highway/profile-separated/ ../data-set/highway/
 rm -r ./workspace/
