@@ -63,7 +63,7 @@ cd ..
 
 cd ../coldwater/
 mkdir results
-for i in ../../../../../../dds-zharfanf/workspace/results/*coldwater*; do cp $i ./results/; done
+for i in ../../../../../../dds-zharfanf/workspace/resultsColdwater/*coldwater*; do cp $i ./results/; done
 cp -r ../../../../../../dds-zharfanf/workspace/profile-coldwater/profile-separated/ .
 mv profile-separated/ profile/
 cd profile/
@@ -73,7 +73,7 @@ cd ..
 
 cd ../roppongi/
 mkdir results
-for i in ../../../../../../dds-zharfanf/workspace/results/*roppongi*; do cp $i ./results/; done
+for i in ../../../../../../dds-zharfanf/workspace/resultsRoppongi/*roppongi*; do cp $i ./results/; done
 cp -r ../../../../../../dds-zharfanf/workspace/profile-roppongi/profile-separated/ .
 mv profile-separated/ profile/
 cd profile/
