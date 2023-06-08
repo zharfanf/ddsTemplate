@@ -5,7 +5,7 @@ sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd6
     sudo chmod +x /usr/bin/yq
 git clone https://github.com/zharfanf/dds-zharfanf.git
 
-if [[ !-d  "./miniconda3" ]]; then
+if [[ ! -d  "./miniconda3" ]]; then
     wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
     bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
 fi
@@ -50,34 +50,35 @@ cp ./dds-zharfanf/workspace/stats ../dds-zharfanf/workspace/
 cp ./dds-zharfanf/workspace/statsTest ../dds-zharfanf/workspace/
 cp -r ./dds-zharfanf/workspace/profile-* ../dds-zharfanf/workspace/
 
+cd ../dds-zharfanf/workspace/
+
 cp -r ./profile-rene/profile-separated/ ../data-set/rene/
 cp -r ./profile-uav-1/profile-separated/ ../data-set/uav-1/
 cp -r ./profile-uav-2/profile-separated/ ../data-set/uav-2/
 
-cd ../dds-zharfanf/workspace/
-
 # roppongi results
 gdown --id 1g6vaIz8Q6hBnJZxDJJqVXTxTaR9AUw_R
 unzip roppongi.zip
-cp roppongiResults/* ./results/
+cp resultsRoppongi/* ./results/
 cp -r ./profile-roppongi/profile-separated/ ../data-set/roppongi/
 
 # coldwater results
 gdown --id 1ZqXFyWYCFOZvbF6448c3pBfSfKrEobD-
 unzip coldwater.zip
-for i in coldwaterResults/*; do cp $i ./results/; done
+for i in resultsColdwater/*; do cp $i ./results/; done
 cp -r ./profile-coldwater/profile-separated/ ../data-set/coldwater/
 
 # jakarta, highway, and coldwater as well as roppongi mpeg results
 gdown --id 1aS_MKrMUcUxFXm7BVsGw8vdfi3WJdziA
 unzip jakarta_highway_update_of_coldwater_roppongi.zip
-cp ./workspace/jakartaResults/* ./results/
-cp ./workspace/highwayResults/* ./results/
+cp ./workspace/resultsJakarta/* ./results/
+cp ./workspace/resultsHighway/* ./results/
 cp coldwaterMpegGt/* ./results/
 cp roppongiMpegGt/* ./results/
 cp -r ./workspace/profile-jakarta/profile-separated/ ../data-set/jakarta/
 cp -r ./workspace/profile-highway/profile-separated/ ../data-set/highway/
-rm -r ./workspace/
+cp -r ./workspace/profile-jakarta/ .
+cp -r ./workspace/profile-highway/ .
 
 wget people.cs.uchicago.edu/~kuntai/frozen_inference_graph.pb
 cp ./frozen_inference_graph.pb ..
